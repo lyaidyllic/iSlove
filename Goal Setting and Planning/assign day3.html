@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Esai</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        background: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
+        margin: 50px;
+      }
+
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #f5d9f4;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input[type="file"],
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        border: 3px solid #6f266c;
+        border-radius: 4px;
+        font-family: "Times New Roman", Times, serif;
+        background-color: #fff;
+        text-align: justify;
+      }
+
+      textarea#Assignment {
+        height: 130px;
+        font-size: 16px;
+      }
+
+      textarea#jawaban {
+        height: 200px;
+        font-size: 16px;
+      }
+
+      input[type="submit"] {
+        background-color: #7b45a0;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .tautan {
+        box-sizing: border-box;
+        border: 3px solid #6f266c;
+        border-radius: 4px;
+        background-color: #fff;
+        padding: 10px 15px;
+        margin-bottom: 16px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #9795f0;
+      }
+
+      /* Styles for the notification popup */
+      .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .popup-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        position: relative;
+      }
+
+      .popup-btn {
+        background-color: #7b45a0;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="essayForm" action="proses_form_esai.php" method="post">
+      <h2>Goal Setting and Planning "Mind Map"</h2>
+
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" required />
+
+      <label for="Assignment">Assignment Day-3 :</label>
+      <textarea id="Assignment" name="Assignment" readonly class="form-control-plaintext">
+        Pada pengimplementasian di third day kali ini, kalian dapat membuat mind map. Mind map yang akan kalian buat akan berisi prioritas dan cara kalian untuk mengatur waktu dari skala kesibukan kegiatan yang kalian jalani. Buatlah mind map pada link yang ada di bawah ini kemudian kumpulkan hasil mind map dalam bentuk file Pdf.
+    </textarea
+      >
+      <label for="tautan">Akses Link Mind Map di bawah ini: </label>
+      <div class="tautan">
+        <a href="https://www.canva.com/design/DAF2kiqU31I/rXguU3N2_UNImR9m2fm0RQ/edit?utm_content=DAF2kiqU31I&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Klik untuk Mengakses Link Mind Map berikut</a>
+      </div>
+      <label for="Assignment">File Mind Map</label>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1" required />
+      <input type="submit" value="Kirim" />
+    </form>
+
+    <!-- Notification Popup -->
+    <div id="notificationPopup" class="popup">
+      <div class="popup-content">
+        <p style="font-size: 20px">Jawaban kamu telah terkirim, terima kasih!</p>
+        <a href="day3.html"><button class="popup-btn" onclick="showPreviews()">Kembali ke materi</button></a>
+        <a href="day4.html"><button class="popup-btn" onclick="showNext()">Materi Selanjutnya</button></a>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("essayForm").addEventListener("submit", function (event) {
+        // Prevent the form from submitting
+        event.preventDefault();
+
+        // Show the notification popup
+        document.getElementById("notificationPopup").style.display = "flex";
+
+        // Reset the form (optional)
+        this.reset();
+
+        // You can also redirect the user or perform other actions here
+      });
+    </script>
+  </body>
+</html>

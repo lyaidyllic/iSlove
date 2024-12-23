@@ -1,0 +1,96 @@
+.search-and-scroller-container {
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 1px solid #0f0e0e;
+  max-height: 400px;
+  padding: 50px 30px;
+}
+
+.scroller {
+  overflow-y: auto;
+  max-height: 400px; /* Optional: Set a maximum height for the scroller */
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+  padding: 5px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: lighter;
+}
+
+.banner {
+  height: 150px;
+  background-color: rgba(218, 143, 235, 0.8);
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 30px;
+  border: 1px solid #2d2828;
+}
+
+.col-3 {
+  max-height: 300px;
+  border: 1px solid #2d2828;
+}
+.product {
+  background-color: #f4e0e8;
+  text-align: justify;
+  color: #585353;
+  font-family: IBM Plex Sans;
+}
+.col {
+  padding: 0px 30px;
+}
+.jumbotron {
+  background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
+  padding-top: 50px;
+  margin-top: 50px;
+  text-align: justify;
+  font-family: Lora;
+}
+.footer {
+  padding-bottom: 50px;
+}
+.pic {
+  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+  border: 3px solid #f5eeee;
+}
+
+.text {
+  padding: 4px;
+  transition: background-color 0.3s, color 0s, border-radius 0s;
+}
+
+.intro:hover .text {
+  border-radius: 100%;
+  border: 2px solid;
+}
+
+.intro:hover {
+  background-color: #e3aaf0;
+}
+
+.intro {
+  transition: background-color 0.3s;
+}
+.tautan:link {
+  color: rgb(20, 17, 17);
+  text-decoration: none;
+}
+a.tautan {
+  color: rgb(20, 17, 17);
+  text-decoration: none;
+}
+.scroller p:hover {
+  background-color: #f4e0e8;
+}
+img {
+  display: flex;
+}
+.tombol:hover {
+  border-radius: 100%;
+  border: 2px solid;
+  background-color: #d074e4;
+}
+.btn btn-lg active mx-auto:hover {
+  background-color: #232024;
+}
