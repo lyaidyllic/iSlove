@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <style>
+    body {
+        background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);    }
+    .card {
+        background-image: linear-gradient(to top, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%);
+    }
+  </style>
+  <body id="home">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg shadow-sm fixed-top"   style = "background-image: linear-gradient(-225deg, #7742B2 0%, #F180FF 52%, #FD8BD9 100%);">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+          <img src="gradasi iSlove.png" alt="isLove" width="100" height="40"/>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="About.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="About.html#1" data-target="#collapseOne">Vision</a></li>
+                <li><a class="dropdown-item" href="About.html#2" data-target="#collapseTwo">Mission</a></li>
+                <li><a class="dropdown-item" href="About.html#3" data-target="#collapseThree">Our Team</a></li>
+              </ul>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="home.html#artikel">Artikel<span class="sr-only"></span></a>
+          </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container" style="margin-top: 100px">
+      <h2 class="text-center mb-4">About Us</h2>
+      <div class="accordion" id="aboAccordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0" id="1">
+              <button class="btn" style="background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Vision</button>
+            </h2>
+          </div>
+
+          <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#aboAccordion">
+            <div class="card-body">Menjadi platform pembelajaran yang terdepan dalam pengembangan diri holistik bagi remaja dan mahasiswa, dengan memberikan aksesibilitas, panduan yang jelas, dan komunitas dukungan yang kuat.</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0" id="2">
+               <div class="btn" style="background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Mission</button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse hide" aria-labelledby="headingTwo" data-parent="#aboAccordion">
+            <div class="card card-body">
+              <h5>Misi Kami</h5>
+              <ol>
+                <li>Kami bertujuan untuk mengembangkan aspek-aspek penting dalam kehidupan remaja dan mahasiswa dengan jelas dan terstruktur untuk membantu mereka mencapai perkembangan diri yang holistik.</li>
+                <li>Kami berkomitmen untuk menyediakan akses mudah dan terjangkau ke konten pembelajaran yang berkualitas tinggi mengenai pengembangan diri melalui berbagai jenis pernagkat.</li>
+                <li>
+                  Kami menyadari bahwa proses pengembangan diri membutuhkan struktur yang jelas. Oleh karena itu, kami menyediakan roadmap yang membantu pengguna kami untuk mengikuti dan memahami langkah-langkah perkembangan diri yang
+                  disesuaikan dengan konten yang mereka pilih.
+                </li>
+                <li>
+                  Kami melihat iSlove bukan hanya sebagai platform pembelajaran, tetapi juga sebagai wadah untuk menciptakan komunitas dukungan. Kami mendorong interaksi dan berbagi pengalaman antara pengguna kami, sehingga mereka dapat
+                  saling mendukung menciptakan lingkungan yang positif serta menjadi pengalaman indah dan berharga.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0" id="3">
+            <button class="btn" style="background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Our Team</button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse hide" aria-labelledby="headingThree" data-parent="#aboAccordion">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="card text-center">
+                    <br />
+                    <img class="rounded-circle mx-auto" src="Luthfi(1).jpg" width="100" alt="Card image cap" />
+                    <div class="card-body">
+                      <h5 class="card-title">Luthfi Zahran</h5>
+                      <p class="card-text">Product Manager</p>
+                      <a href="#" class="btn btn-primary">Lihat Profil</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card text-center">
+                    <br />
+                    <img class="rounded-circle mx-auto" src="Alya.jpg" width="100" alt="Card image cap" />
+                    <div class="card-body">
+                      <h5 class="card-title">Alya Andini</h5>
+                      <p class="card-text">Web Developer</p>
+                      <a href="#" class="btn btn-primary">Lihat Profil</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card text-center">
+                    <br />
+                    <img class="rounded-circle mx-auto" src="salsa.jpg" width="100" alt="Card image cap" />
+                    <div class="card-body">
+                      <h5 class="card-title">Salsabila Syadza</h5>
+                      <p class="card-text">Content Creator</p>
+                      <a href="#" class="btn btn-primary">Lihat Profil</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card text-center">
+                    <br />
+                    <img class="rounded-circle mx-auto" src="Amel.png" width="100" alt="Card image cap" />
+                    <div class="card-body">
+                      <h5 class="card-title">Amelia Vega</h5>
+                      <p class="card-text">Product Designer</p>
+                      <a href="#" class="btn btn-primary">Lihat Profil</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

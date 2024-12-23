@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Esai</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        background: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
+        margin: 50px;
+      }
+
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #f5d9f4;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input[type="file"],
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        border: 3px solid #6f266c;
+        border-radius: 4px;
+        font-family: "Times New Roman", Times, serif;
+        background-color: #fff;
+        text-align: justify;
+      }
+
+      textarea#Assignment {
+        height: 130px;
+        font-size: 16px;
+      }
+
+      textarea#jawaban {
+        height: 200px;
+        font-size: 16px;
+      }
+
+      input[type="submit"] {
+        background-color: #7b45a0;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .teknis {
+        box-sizing: border-box;
+        border: 3px solid #6f266c;
+        border-radius: 4px;
+        background-color: #fff;
+        padding: 10px 15px;
+        margin-bottom: 16px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #9795f0;
+      }
+
+      /* Styles for the notification popup */
+      .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .popup-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        position: relative;
+      }
+
+      .popup-btn {
+        background-color: #7b45a0;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="essayForm" action="proses_form_esai.php" method="post">
+      <h2>Time Management and Productivity "Time Capsule"</h2>
+
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" required />
+
+      <label for="Assignment">Assignment Day-1 :</label>
+      <textarea id="Assignment" name="Assignment" readonly class="form-control-plaintext">
+        Pada pengimplementasian di first day kali ini, buatlah sebuah "time capsule" virtual yang berisi gambaran tentang diri kalian di masa depan, sekitar 5 atau 10 tahun ke depan. Apa yang kalian lakukan? Di mana kalian bekerja atau belajar? Bagaimana kalian menjalani kehidupan sehari-hari? Sertakan gambar, tulisan, atau bahkan rekaman suara (opsional) yang merepresentasikan visi kalian tentang masa depan.
+    </textarea
+      >
+
+      <label for="Assignment">Berikut Teknis Pengerjaannya</label>
+      <div class="teknis">
+        <ol>
+          <li>Buat dokumen digital menggunakan Microsoft Word, Google Docs, atau aplikasi pengolah kata lainnya.</li>
+          <li>
+            Tulis deskripsi tentang diri kalian di masa depan. Gambarkan apa yang kalian lakukan, di mana kalian bekerja atau belajar, dan bagaimana kalian menjalani kehidupan sehari-hari. Gunakan bahasa deskriptif dan bayangkan
+            detail-detail kecil yang membuat visi kalian hidup.
+          </li>
+          <li>
+            Sertakan Gambar: Unggah atau sertakan gambar yang mewakili visi kalian. Ini bisa berupa foto-foto yang diambil atau gambar ilustrasi yang mencerminkan impian dan cita-cita kalian. Pastikan gambar-gambar ini memperkuat narasi
+            yang telah kalian buat sebelumnya.
+          </li>
+          <li>Sertakan tulisan atau cerita pendek yang menjelaskan momen-momen penting dalam visi masa depan kalian. Ceritakan bagaimana kalian mencapai tujuan-tujuan besar dan bagaimana perjalanan tersebut membentuk diri kalian.</li>
+          <li>Simpan "time capsule" virtual kalian dan pastikan untuk mengamankannya agar bisa diakses di masa depan, kemudian kumpulkan juga sebagai bukti anda telah menyelesaikan materi ini</li>
+        </ol>
+      </div>
+
+      <label for="Assignment">Kumpulkan file dalam bentuk Pdf </label>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1" required />
+      <input type="submit" value="Kirim" />
+    </form>
+
+    <!-- Notification Popup -->
+    <div id="notificationPopup" class="popup">
+      <div class="popup-content">
+        <p style="font-size: 20px">Jawaban kamu telah terkirim, terimakasih!</p>
+        <a href="day1.html"><button class="popup-btn" onclick="showPreviews()">Kembali ke materi</button></a>
+        <a href="day2.html"><button class="popup-btn" onclick="showNext()">Materi Selanjutnya</button></a>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("essayForm").addEventListener("submit", function (event) {
+        // Prevent the form from submitting
+        event.preventDefault();
+
+        // Show the notification popup
+        document.getElementById("notificationPopup").style.display = "flex";
+
+        // Reset the form (optional)
+        this.reset();
+
+        // You can also redirect the user or perform other actions here
+      });
+    </script>
+  </body>
+</html>
